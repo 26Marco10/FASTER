@@ -45,7 +45,7 @@ def main():
             processed_train_texts = X_train.apply(method)
             processed_test_texts = X_test.apply(method)
      
-            result = evaluator.evaluate_classic_model(
+            result = evaluator.evaluate_machine_learning(
                 model, model_name, processed_train_texts, y_train, processed_test_texts, y_test, name
             )
             results.append(result)
