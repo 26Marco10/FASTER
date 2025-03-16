@@ -49,7 +49,7 @@ def main():
                 model, model_name, processed_train_texts, y_train, processed_test_texts, y_test, name
             )
             results.append(result)
-            result['Category'] = 'Classic Machine Learning'  # Aggiungi questa riga
+            result['Category'] = 'Classic Machine Learning'  
             all_results.append(result)
     
         results_df = pd.DataFrame(results)
@@ -62,7 +62,7 @@ def main():
             processed_test_texts = X_test.apply(method)
             result = evaluator.evaluate_deep_learning(model, model_name, processed_test_texts, y_test, name)
             results.append(result)
-            result['Category'] = 'Deep Learning (Pipeline)'  # Aggiungi questa riga
+            result['Category'] = 'Deep Learning (Pipeline)'  
             all_results.append(result)
 
         results_df = pd.DataFrame(results)
@@ -94,7 +94,7 @@ def main():
                 num_train_epochs=2
             )
             finetuned_results.append(result)
-            result['Category'] = 'Deep Learning (Fine-Tuned)'  # Aggiungi questa riga
+            result['Category'] = 'Deep Learning (Fine-Tuned)'  
             all_results.append(result)
         finetuned_results_df = pd.DataFrame(finetuned_results)
         print(tabulate(finetuned_results_df, headers='keys', tablefmt='grid'))
